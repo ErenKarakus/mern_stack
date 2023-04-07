@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // Income
-const form3 = new mongoose.Schema({
+const form3Schema = new mongoose.Schema({
     // Interest and dividends from UK banks and building societies
     q1: {                        // Taxed UK interest
         type: Number,
@@ -91,4 +91,4 @@ const form3 = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('form3', form3)
+module.exports = mongoose.model('Form3', form3Schema)

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // Tax reliefs
-const form4 = new mongoose.Schema({
+const form4Schema = new mongoose.Schema({
     // Paying into registered pension schemes and overseas pension schemes
     q1: {                        // Payments to registered pension schemes where basicrate tax relief will be claimed by your 
                                  // pension provider (called ‘relief at source’). Enter the payments and basic rate tax
@@ -77,4 +77,4 @@ const form4 = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('form4', form4)
+module.exports = mongoose.model('Form4', form4Schema)

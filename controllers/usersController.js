@@ -72,6 +72,7 @@ const updateUser = asyncHandler(async (req, res) => {
 
     // Check for duplicate
     const duplicate = await User.findOne({ username }).collation({ locale: 'en', strength: 2 }).lean().exec()
+
     // Allow updates to the original user
     if (duplicate && duplicate?._id.toString() !== id) {
         return res.status(409).json({ message: 'Duplicate username'})
@@ -89,7 +90,6 @@ const updateUser = asyncHandler(async (req, res) => {
     const updatedUser = await user.save()
 
     res.json({ message: `${updateUser.username} updated`})
-
 })
 
 // @desc Delete a user

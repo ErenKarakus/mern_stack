@@ -1,7 +1,12 @@
 const mongoose = require('mongoose')
 
 // Starting your tax return
-const form1 = new mongoose.Schema({
+const form1Schema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     q1: {                        // Your date of birth
         type: Date,
         required: true
@@ -40,4 +45,4 @@ const form1 = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('form1', form1)
+module.exports = mongoose.model('Form1', form1Schema)

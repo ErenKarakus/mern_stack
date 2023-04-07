@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // What makes up your tax return
-const form2 = new mongoose.Schema({
+const form2Schema = new mongoose.Schema({
     q1: {                        // Employment
         type: [String],
         required: true
@@ -40,4 +40,4 @@ const form2 = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('form2', form2)
+module.exports = mongoose.model('Form2', form2Schema)
