@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const AutoIncrement = require('mongoose-sequence')(mongoose)
 
 // Starting your tax return
 const form1Schema = new mongoose.Schema({
@@ -43,6 +44,12 @@ const form1Schema = new mongoose.Schema({
         type: String,
         required: true
     }
+})
+
+form1Schema.plugin(AutoIncrement, {
+    inc_field: 'ticket',
+    id: 'ticketNums',
+    start_seq: 0
 })
 
 module.exports = mongoose.model('Form1', form1Schema)

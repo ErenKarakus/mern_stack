@@ -90,7 +90,7 @@ const updateForm1 = async (req, res) => {
     form1.q4 = q4
     form1.q5 = q5
 
-    const updatedForm1 = await form.save()
+    const updatedForm1 = await form1.save()
 
     res.json(`${updatedForm1.q1} updated`)
 }
