@@ -72,7 +72,7 @@ const updateForm2 = async (req, res) => {
     }
 
     // Check for duplicate form2s by name 
-    // const duplicate = await Form2.findOne({ q1 }).collation({ locale: 'en', strength: 2 }).lean().exec()
+    const duplicate = await Form2.findOne({ user }).collation({ locale: 'en', strength: 2 }).lean().exec()
 
     // Allow updating of the original form2 
     if (duplicate && duplicate?._id.toString() !== id) {

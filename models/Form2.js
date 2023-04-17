@@ -2,6 +2,11 @@ const mongoose = require('mongoose')
 
 // What makes up your tax return
 const form2Schema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     q1: {                        // Employment
         type: [String],
         required: true

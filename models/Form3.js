@@ -3,6 +3,11 @@ const mongoose = require('mongoose')
 // Income
 const form3Schema = new mongoose.Schema({
     // Interest and dividends from UK banks and building societies
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     q1: {                        // Taxed UK interest
         type: Number,
         required: false
