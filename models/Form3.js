@@ -94,6 +94,10 @@ const form3Schema = new mongoose.Schema({
         type: String,
         required: false
     }
-})
+},
+    {
+        timestamps: true
+    }
+)
 
 module.exports = mongoose.model('Form3', form3Schema)

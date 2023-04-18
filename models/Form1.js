@@ -44,7 +44,11 @@ const form1Schema = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+},
+    {
+        timestamps: true
+    }
+)
 
 form1Schema.plugin(AutoIncrement, {
     inc_field: 'ticket',

@@ -46,7 +46,7 @@ const createNewForm3 = async (req, res) => {
     const form3 = await Form3.create({ user, q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21 })
 
     if (form3) { // Created 
-        return res.status(303).json({ message: 'New form3 created' })
+        return res.status(201).json({ message: 'New form3 created' })
     } else {
         return res.status(400).json({ message: 'Invalid form3 data received' })
     }

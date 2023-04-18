@@ -32,6 +32,7 @@ app.use('/auth', require('./routes/authRoutes'))
 app.use('/form1s', require('./routes/form1Routes'))
 app.use('/form2s', require('./routes/form2Routes'))
 app.use('/form3s', require('./routes/form3Routes'))
+app.use('/form4s', require('./routes/form4Routes'))
 
 app.all('*', (req, res) => {
     res.status(404)
