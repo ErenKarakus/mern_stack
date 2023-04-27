@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -23,9 +24,12 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.9.3",
     "mongoose-sequence": "^5.3.1",
+    "supertest": "^6.3.3",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "jest": "^29.5.0",
+    "mongodb-memory-server-core": "^8.12.2",
     "nodemon": "^2.0.20"
   }
 }
